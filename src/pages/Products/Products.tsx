@@ -27,7 +27,10 @@ function Products() {
             <p>{product.description}</p>
             <p>Price: ${product.price}</p>
             <p>Installments: {product.numberOfInstallments}</p>
-            <Link to={`/products/${product._id}`}>View Details</Link>
+            <div>
+              <Link to={`/products/${product._id}`}>View Details</Link>
+              <Link to={`/products/${product._id}`}>Buy</Link>
+            </div>
           </div>
         ))}
       </div>

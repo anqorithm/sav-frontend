@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 function CreateProduct() {
-  const navigate = useNavigate();
-
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -13,6 +11,19 @@ function CreateProduct() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    if (!name || !description || !price || !imageUrl || !numberOfInstallments) {
+      toast.error("Please note that all fields are required", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
     const productData = {
       name,
       description,
@@ -20,7 +31,6 @@ function CreateProduct() {
       imageUrl,
       numberOfInstallments,
     };
-
     try {
       const response = await fetch("http://127.1.1.0:9000/api/v1/products", {
         method: "POST",
@@ -31,6 +41,11 @@ function CreateProduct() {
       });
       const data = await response.json();
       console.log("Product created:", data);
+      setName("");
+      setDescription("");
+      setPrice("");
+      setImageUrl("");
+      setNumberOfInstallments("");
       toast.success("Product has been created successfully!", {
         position: "top-right",
         autoClose: 5000,
@@ -41,9 +56,6 @@ function CreateProduct() {
         progress: undefined,
         theme: "colored",
       });
-      setTimeout(() => {
-        navigate("/products");
-      }, 5000);
     } catch (error) {
       alert("Product does not created!");
       console.log(error);
