@@ -32,7 +32,7 @@ function CreateProduct() {
       numberOfInstallments,
     };
     try {
-      const response = await fetch("http://127.1.1.0:9000/api/v1/products", {
+      const response = await fetch("http://127.1.1.1:9000/api/v1/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

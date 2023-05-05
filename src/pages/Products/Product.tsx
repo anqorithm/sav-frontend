@@ -6,7 +6,7 @@ function Product() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("http://127.1.1.0:9000/api/v1/products");
+        const response = await fetch("http://127.1.1.1:9000/api/v1/products");
         const data = await response.json();
         setProducts(data.data.data.products);
       } catch (error) {
