@@ -6,9 +6,11 @@ function Products() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("http://127.1.1.0:9000/api/v1/products");
+        const response = await fetch("http://127.1.1.1:9000/api/v1/products");
         const data = await response.json();
-        setProducts(data.data.data.products);
+        console.log(data);
+
+        setProducts(data.data.products);
       } catch (error) {
         console.log(error);
       }
@@ -30,6 +32,9 @@ function Products() {
             <div>
               <Link to={`/products/${product._id}`}>View Details</Link>
               <Link to={`/products/${product._id}`}>Buy</Link>
+              <Link to={`/request-installment/${product._id}`}>
+                Request Installment
+              </Link>
             </div>
           </div>
         ))}
