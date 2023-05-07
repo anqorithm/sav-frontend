@@ -42,7 +42,7 @@ function Installments() {
             <th>User Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Product ID</th>
+            <th>Product Name</th>
             <th>Amount</th>
             <th>Due Date</th>
             <th>Is Paid</th>
@@ -55,7 +55,7 @@ function Installments() {
               <td>{installment.user.name}</td>
               <td>{installment.user.email}</td>
               <td>{installment.user.phone}</td>
-              <td>{installment.productId}</td>
+              <td>{installment.productName}</td>
               <td>{installment.amount}</td>
               <td>{new Date(installment.dueDate).toLocaleDateString()}</td>
               <td>{installment.isPaid ? 'Yes' : 'No'}</td>
