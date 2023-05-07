@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "./productStyle.css";
 function Product() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
