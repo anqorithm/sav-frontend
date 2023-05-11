@@ -21,7 +21,12 @@ function Transactions() {
 
   return (
     <div className="container">
-      <h2>Transactions 💸</h2>
+      <div className="divider">
+        <h2>Transactions 💸</h2>
+        <Link to="/createTransaction" className="button">
+          Create New Transaction 🚀👇
+        </Link>
+      </div>
       <div className="transactions-container">
         {transactions.map((transaction: any) => (
           <div className="transaction-card" key={transaction._id}>
