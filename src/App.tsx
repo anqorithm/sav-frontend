@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pages from "./pages/Pages"
 import Products from "./pages/Products/Products";
 import Product from "./pages/Products/Product";
+import Installments from "./pages/Installments/Instalments";
+import UserInstallments from "./pages/Installments/UserInstallment";
+import RequestInstallment from "./pages/Installments/RequestInstallment";
 import CreateProduct from "./pages/Products/CreateProduct";
 import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
@@ -13,7 +16,7 @@ import Sdata from "./components/shops/Sdata"
 
 
 function App() {
-    //Step 1 :
+  //Step 1 :
   const { productItems } = Data
   const { shopItems } = Sdata
 
@@ -60,20 +63,23 @@ function App() {
   }
   return (
     <>
-     <Router>
-     <Header CartItem={CartItem} />
-   <Routes> 
-     <Route path="/" element={ <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
-     <Route path="/cart" element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} />
-     <Route path="/products" element={<Products />} />
-     <Route path="/createProduct" element={<CreateProduct />} />
-     <Route path="/product/:id" element={<Product />} />
-   </Routes>
-   <Footer />
- </Router>
+      <Router>
+        <Header CartItem={CartItem} />
+        <Routes>
+          <Route path="/" element={<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
+          <Route path="/cart" element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/createProduct" element={<CreateProduct />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/installments" element={<Installments />} />
+          <Route path="/user/installments/:phone" element={<UserInstallments />} />
+          <Route path="/request-installment/:productId" element={<RequestInstallment />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
-   
-     
+
+
   )
 }
 
