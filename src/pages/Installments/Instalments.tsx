@@ -1,3 +1,5 @@
+// test
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -15,6 +17,7 @@ interface Installment {
   dueDate: string;
   isPaid: boolean;
   createdAt: string;
+  productName: string;
 }
 
 function Installments() {
