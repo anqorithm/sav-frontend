@@ -131,7 +131,7 @@ function ManageTransactionPage() {
         </div>
       </div>
       <Link to="/transactions" className="button">
-        Back to Transactions
+        Back to Transactions 👈
       </Link>
     </div>
   );

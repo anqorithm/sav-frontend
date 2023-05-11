@@ -41,7 +41,7 @@ function TransactionDetails() {
         <p>Updated At: {transaction.updatedAt}</p>
       </div>
       <Link to="/transactions" className="button">
-        Back to Transactions
+        Back to Transactions 👈
       </Link>
     </div>
   );
