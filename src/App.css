@@ -71,9 +71,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+.button {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  font-weight: bold;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #ffffff;
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
 }
 .background {
   background: #f6f9fc;
@@ -111,7 +131,8 @@ li {
 .RText {
   text-align-last: right;
 }
-input, button {
+input,
+button {
   border: none;
   outline: none;
   background-color: none;
@@ -160,7 +181,7 @@ input, button {
 }
 .category .box:hover {
   background-color: #e6ffdc;
-  
+
   cursor: pointer;
 }
 

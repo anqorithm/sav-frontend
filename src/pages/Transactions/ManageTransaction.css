@@ -1,0 +1,11 @@
+.rejected {
+  color: red;
+}
+
+.accepted {
+  color: green;
+}
+
+.canceled {
+  color: orange;
+}
