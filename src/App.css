@@ -78,6 +78,7 @@ html {
   background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
   font-weight: bold;
   margin: 0.3rem;
+  height: 40px;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   border: none;

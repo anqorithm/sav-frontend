@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "./productStyle.css";
 function CreateProduct() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");

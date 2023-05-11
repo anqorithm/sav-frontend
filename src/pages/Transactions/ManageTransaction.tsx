@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./ManageTransaction.css";
 import { ToastContainer, toast } from "react-toastify";
-import TransactionDetails from "./Transaction";
 
 function ManageTransactionPage() {
   const { id } = useParams();
