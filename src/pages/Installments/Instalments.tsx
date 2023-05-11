@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface User {
   name: string;
@@ -55,8 +56,8 @@ function Installments() {
               <td>{installment.user.name}</td>
               <td>{installment.user.email}</td>
               <td>{installment.user.phone}</td>
-              <td>{installment.productName}</td>
-              <td>{installment.amount}</td>
+              <td><Link to={`/product/${installment.productId}`}>{installment.productName}</Link></td>
+              <td>{(installment.amount).toFixed(3)}</td>
               <td>{new Date(installment.dueDate).toLocaleDateString()}</td>
               <td>{installment.isPaid ? 'Yes' : 'No'}</td>
               <td>{new Date(installment.createdAt).toLocaleDateString()}</td>
@@ -67,5 +68,6 @@ function Installments() {
     </div>
   );
 }
+
 
 export default Installments;

@@ -87,7 +87,7 @@ function UserInstallments() {
                     {installments.map((installment) => (
                         <tr key={installment._id}>
                             <td>{installment.productId}</td>
-                            <td>{installment.amount}</td>
+                            <td>{(installment.amount).toFixed(3)}</td>
                             <td>{new Date(installment.dueDate).toLocaleDateString()}</td>
                             <td>{installment.isPaid ? 'Yes' : 'No'}</td>
                             <td>{new Date(installment.createdAt).toLocaleDateString()}</td>
