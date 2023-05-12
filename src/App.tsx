@@ -9,8 +9,6 @@ import ManageTransaction from "./pages/Transactions/ManageTransaction";
 import UserInstallments from "./pages/Installments/UserInstallment";
 import RequestInstallment from "./pages/Installments/RequestInstallment";
 import CreateProduct from "./pages/Products/CreateProduct";
-import Home from "./Home/"
-import Pages from "./pages/HomePage/Pages"
 
 function App() {
   return (
@@ -20,6 +18,7 @@ function App() {
         <Route path="/" element={<Pages />} />
           <Route path="/products" element={<Products />} />
           <Route path="/createProduct" element={<CreateProduct />} />
+          <Route path="/createTransaction" element={<CreateTransaction />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/installments" element={<Installments />} />
           <Route

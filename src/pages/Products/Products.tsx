@@ -22,7 +22,7 @@ function Products() {
     <div className="container">
       <div className="divider">
         <h2>Products Page 📦</h2>
-        <Link to="/products/new" className="button">
+        <Link to="/createProduct" className="button">
           Create New Product 🚀👇
         </Link>
       </div>

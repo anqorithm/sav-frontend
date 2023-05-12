@@ -27,7 +27,7 @@ function ManageTransactionPage() {
       await fetch(`http://127.1.1.0:9000/api/v1/transactions/${id}/reject`, {
         method: "PUT",
       });
-      toast.success("Transaction has been rejected successfully!", {
+      toast.error("Transaction has been rejected successfully!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -69,7 +69,7 @@ function ManageTransactionPage() {
       await fetch(`http://127.1.1.0:9000/api/v1/transactions/${id}/cancel`, {
         method: "PUT",
       });
-      toast.success("Transaction has been canceled successfully!", {
+      toast.info("Transaction has been canceled successfully!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -131,7 +131,7 @@ function ManageTransactionPage() {
         </div>
       </div>
       <Link to="/transactions" className="button">
-        Back to Transactions
+        Back to Transactions 👈
       </Link>
     </div>
   );
