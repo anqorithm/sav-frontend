@@ -25,7 +25,7 @@ function Product() {
             <h3>{product.name}</h3>
             <img src={product.imageUrl} alt={product.name} />
             <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
+            <p>Price:  ${product.price}</p>
             <p>Installments: {product.numberOfInstallments}</p>
             <Link to={`/products/${product._id}`}>View Details</Link>
           </div>
