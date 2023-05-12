@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./About.css";
+import "./Contact.css";
 
-const About = () => {
+const Contact = () => {
   return (
     <>
       <div className="header">
@@ -24,10 +24,10 @@ const About = () => {
       </div>
       <div className="center">
         <h1>Coming Soon...</h1>
-        <h2>About Page 🚀</h2>
+        <h2>Contact Page 🤙</h2>
       </div>
     </>
   );
 };
 
-export default About;
+export default Contact;

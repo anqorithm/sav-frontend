@@ -11,6 +11,8 @@ import UserInstallments from "./pages/Installments/UserInstallment";
 import RequestInstallment from "./pages/Installments/RequestInstallment";
 import CreateProduct from "./pages/Products/CreateProduct";
 import CreateTransaction from "./pages/Transactions/CreateTransaction";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/createProduct" element={<CreateProduct />} />
           <Route path="/createTransaction" element={<CreateTransaction />} />
