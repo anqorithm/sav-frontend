@@ -28,7 +28,7 @@ function UserInstallments() {
     useEffect(() => {
         async function fetchInstallments() {
             try {
-                const response = await fetch(`http://127.1.1.1:9003/api/v1/installments/user/${phone}`);
+                const response = await fetch(`http://127.1.1.0:9000/api/v1/installments/user/${phone}`);
                 const data = await response.json();
                 console.log(data);
 
@@ -42,7 +42,7 @@ function UserInstallments() {
 
     const handlePayment = async (installmentId: string) => {
         try {
-            const response = await fetch(`http://127.1.1.1:9003/api/v1/installments/${installmentId}`, {
+            const response = await fetch(`http://127.1.1.0:9000/api/v1/installments/${installmentId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

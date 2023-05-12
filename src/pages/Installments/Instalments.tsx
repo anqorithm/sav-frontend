@@ -23,9 +23,8 @@ function Installments() {
   useEffect(() => {
     async function fetchInstallments() {
       try {
-        const response = await fetch("http://127.1.1.1:9003/api/v1/installments");
+        const response = await fetch("http://127.1.1.0:9000/api/v1/installments");
         const data = await response.json();
-        console.log(data);
         
         setInstallments(data);
       } catch (error) {
@@ -57,7 +56,7 @@ function Installments() {
               <td>{installment.user.name}</td>
               <td>{installment.user.email}</td>
               <td>{installment.user.phone}</td>
-              <td><Link to={`/product/${installment.productId}`}>{installment.productName}</Link></td>
+              <td><Link to={`/products/${installment.productId}`}>{installment.productName}</Link></td>
               <td>{(installment.amount).toFixed(3)}</td>
               <td>{new Date(installment.dueDate).toLocaleDateString()}</td>
               <td>{installment.isPaid ? 'Yes' : 'No'}</td>

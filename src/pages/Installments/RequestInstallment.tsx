@@ -24,11 +24,11 @@ function RequestInstallment() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://127.1.1.1:9000/api/v1/products/${productId}`);
+                const response = await fetch(`http://127.1.1.0:9000/api/v1/products/${productId}`);
                 const data = await response.json();
                 console.log(data);
 
-                setProduct(data.data);
+                setProduct(data.data.data);
             } catch (error) {
                 console.error("Error fetching product:", error);
             }
@@ -47,7 +47,7 @@ function RequestInstallment() {
         };
 
         try {
-            const response = await fetch("http://127.1.1.1:9003/api/v1/installments", {
+            const response = await fetch("http://127.1.1.0:9000/api/v1/installments", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
