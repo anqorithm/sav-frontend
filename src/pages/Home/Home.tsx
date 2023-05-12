@@ -35,7 +35,7 @@ const Pages = () => {
           </Link>
           <Link to="/installments">
             {" "}
-            <button className="button">Installment</button>
+            <button className="button">Installments</button>
           </Link>
         </div>
       </div>

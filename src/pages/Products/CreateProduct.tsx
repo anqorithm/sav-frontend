@@ -1,5 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./CreateProduct.css";
+
 function CreateProduct() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -61,87 +64,91 @@ function CreateProduct() {
   };
 
   return (
-    <div className="cont">
+    <div className="container">
       <ToastContainer />
-      <h2 className="crp lb tl">Create Product</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="row">
-          <div className="col-25">
-            <label className="crp lb name">Name:</label>
-          </div>
-          <div className="col-75">
-            <input
-              className="crp inp name"
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Your name.."
-            />
-          </div>
-        </div>
 
-        <div className="row">
-          <div className="col-25">
-            <label className="crp lb ds">Description:</label>
-          </div>
-          <div className="col-75">
-            <textarea
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              placeholder="Describe the product.."
-            />
-          </div>
-        </div>
+      <div className="container">
+        <ToastContainer />
+        <h2 className="crp lb tl">Create Product</h2>
+        <div className="card">
+          <div className="card-body">
+            <form onSubmit={handleSubmit}>
+              <div className="row">
+                <div className="form-group">
+                  <label className="crp lb name">Name:</label>
+                </div>
+                <div className="form-group">
+                  <input
+                    className="crp inp name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name.."
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="form-group">
+                  <label htmlFor="buyerName">Description:</label>
+                  <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder="Describe the product.."
+                  />
+                </div>
+              </div>
 
-        <div className="row">
-          <div className="col-25">
-            <label className="crp lb pr">Price: </label>
-          </div>
-          <div className="col-75">
-            <input
-              type="number"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              placeholder="Enter the Price.."
-            />
-          </div>
-        </div>
+              <div className="row">
+                <div className="form-group">
+                  <label className="crp lb pr">Price: </label>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="number"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    placeholder="Enter the Price.."
+                  />
+                </div>
+              </div>
 
-        <div className="row">
-          <div className="col-25">
-            <label className="crp lb imgURL">Image URL: </label>
-          </div>
-          <div className="col-75">
-            <input
-              type="text"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
-              placeholder="Enter product's image URL.."
-            />
-          </div>
-        </div>
+              <div className="row">
+                <div className="form-group">
+                  <label className="crp lb imgURL">Image URL:</label>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    value={imageUrl}
+                    onChange={(e) => setImageUrl(e.target.value)}
+                    placeholder="Enter product's image URL.."
+                  />
+                </div>
+              </div>
 
-        <div className="row">
-          <div className="col-25">
-            <label className="crp lb num">Number of Installments: </label>
-          </div>
-          <div className="col-75">
-            <input
-              type="number"
-              value={numberOfInstallments}
-              onChange={(e) => setNumberOfInstallments(e.target.value)}
-              placeholder="Enter the number of installmentsL.."
-            />
-          </div>
-        </div>
+              <div className="row">
+                <div className="form-group">
+                  <label className="crp lb num">Number of Installments: </label>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="number"
+                    value={numberOfInstallments}
+                    onChange={(e) => setNumberOfInstallments(e.target.value)}
+                    placeholder="Enter the number of installments.."
+                  />
+                </div>
+              </div>
 
-        <br />
-        <div className="cnt">
-          <button className="btn" type="submit">
-            Create Product
-          </button>
+              <div className="cnt">
+                <button className="button" type="submit">
+                  Create Product
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
