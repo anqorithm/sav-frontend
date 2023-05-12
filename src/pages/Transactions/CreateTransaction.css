@@ -5,12 +5,9 @@
   padding: 16px;
 }
 
-.card-body {
-  /* Additional styles for card body */
-}
-
-.transaction-form {
-  /* Form styles */
+.container h1 {
+  color: #fff;
+  margin-bottom: 3rem;
 }
 
 .form-group {

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import "./Instalments.css";
+
 interface User {
   name: string;
   email: string;
@@ -23,9 +25,11 @@ function Installments() {
   useEffect(() => {
     async function fetchInstallments() {
       try {
-        const response = await fetch("http://127.1.1.0:9000/api/v1/installments");
+        const response = await fetch(
+          "http://127.1.1.0:9000/api/v1/installments"
+        );
         const data = await response.json();
-        
+
         setInstallments(data);
       } catch (error) {
         console.log(error);
@@ -35,8 +39,8 @@ function Installments() {
   }, []);
 
   return (
-    <div className="container mt-5">
-      <h1 className="mb-4">Installments</h1>
+    <div className="container">
+      <h1>Installments 💸🤙</h1>
       <table className="table table-striped table-bordered">
         <thead className="thead-dark">
           <tr>
@@ -56,10 +60,14 @@ function Installments() {
               <td>{installment.user.name}</td>
               <td>{installment.user.email}</td>
               <td>{installment.user.phone}</td>
-              <td><Link to={`/products/${installment.productId}`}>{installment.productName}</Link></td>
-              <td>{(installment.amount).toFixed(3)}</td>
+              <td>
+                <Link to={`/products/${installment.productId}`}>
+                  {installment.productName}
+                </Link>
+              </td>
+              <td>{installment.amount.toFixed(3)}</td>
               <td>{new Date(installment.dueDate).toLocaleDateString()}</td>
-              <td>{installment.isPaid ? 'Yes' : 'No'}</td>
+              <td>{installment.isPaid ? "Yes" : "No"}</td>
               <td>{new Date(installment.createdAt).toLocaleDateString()}</td>
             </tr>
           ))}
@@ -68,6 +76,5 @@ function Installments() {
     </div>
   );
 }
-
 
 export default Installments;
