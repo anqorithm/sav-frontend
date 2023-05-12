@@ -22,19 +22,22 @@ const Pages = () => {
           </Link>
         </div>
       </div>
-      <div className="body center">
-        <Link to="/createProduct">
-          {" "}
-          <button className="button">Create Products</button>
-        </Link>
-        <Link to="/createTransaction">
-          {" "}
-          <button className="button">Create Transaction</button>
-        </Link>
-        <Link to="/installments">
-          {" "}
-          <button className="button">Installment</button>
-        </Link>
+      <div className="center">
+        <h1>Leading the e-commerce change 💸💶</h1>
+        <div>
+          <Link to="/products">
+            {" "}
+            <button className="button"> Products</button>
+          </Link>
+          <Link to="/transactions">
+            {" "}
+            <button className="button"> Transaction</button>
+          </Link>
+          <Link to="/installments">
+            {" "}
+            <button className="button">Installment</button>
+          </Link>
+        </div>
       </div>
     </>
   );

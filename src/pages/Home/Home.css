@@ -14,14 +14,22 @@
 
 .header a.logo {
   font-size: 25px;
+  font-family: "Orbitron";
   font-weight: bold;
 }
 
 .center {
   display: flex;
+  margin-top: 20rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
+}
+
+.center h1 {
+  color: #f1f1f1;
+  margin-bottom: 5rem;
+  font-size: 80px;
 }
 
 .btn-group .button:not(:last-child) {
