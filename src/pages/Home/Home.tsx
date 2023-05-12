@@ -1,35 +1,40 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Pages = () => {
   return (
     <>
       <div className="header">
-        <a href="" className="logo">
+        <Link to="/" className="logo">
           SAV
-        </a>
-        <div className="header-right">
-          <a className="active" href="#home">
-            Home
-          </a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+        </Link>
+        <div className="links">
+          <Link className="active" to="/">
+            <button className="button">Home</button>
+          </Link>
+          <Link to="/contact">
+            {" "}
+            <button className="button">Contact</button>
+          </Link>
+          <Link to="/about">
+            {" "}
+            <button className="button">About</button>
+          </Link>
         </div>
       </div>
       <div className="body center">
-        <div className="btn-group">
-          <a href="/createProduct">
-            {" "}
-            <button className="button">Create Products</button>
-          </a>
-          <a href="/createTransaction">
-            {" "}
-            <button className="button">Create Transaction</button>
-          </a>
-          <a href="/installments">
-            {" "}
-            <button className="button">Installment</button>
-          </a>
-        </div>
+        <Link to="/createProduct">
+          {" "}
+          <button className="button">Create Products</button>
+        </Link>
+        <Link to="/createTransaction">
+          {" "}
+          <button className="button">Create Transaction</button>
+        </Link>
+        <Link to="/installments">
+          {" "}
+          <button className="button">Installment</button>
+        </Link>
       </div>
     </>
   );

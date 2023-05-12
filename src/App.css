@@ -72,7 +72,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .button {
+.button {
   display: inline-block;
   color: #fff;
   background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
@@ -85,7 +85,7 @@ html {
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
-} */
+}
 
 .button:hover {
   color: #fff;
