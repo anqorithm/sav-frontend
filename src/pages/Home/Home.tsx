@@ -24,7 +24,9 @@ const Pages = () => {
       </div>
       <div className="center">
         <h1>Leading the e-commerce change 💸💶</h1>
-        <h2>We have 3 major services 👇🤙😉</h2>
+        <h2>
+          SAV is the next Tabby/Tamara 🤑 ~ We have 3 major services 👇🤙😉
+        </h2>
         <div>
           <Link to="/products">
             {" "}
